@@ -1,0 +1,35 @@
+
+Explain why a number data type added to a string data type returns a string.
+    When a number and a string are added it creates a string. This is the result of concatenation (creating a larger string).
+    Example:
+    let result = 2 + "2";    // "22"
+
+Name a scenario where using the == operator could cause a bug.
+If you use the == operator it will convert the values to the same type before compairing them. 
+Example:
+console.log(1 == "1");       // Output: true
+Using == can cause unexpected behavior when comparing different types that can be converted to the same value.
+This could allow for incorrect values to be accepted.
+Solution:
+Use === this checks both value and type.
+
+
+Name the operator(s) that you find confusing and explain why.
+One operator that can be confusing is the == operator. == performs type coercion, meaning it converts the operands to a common type before comparison which can lead to unexpected results.
+
+
+
+Explain a situation where you would use the Modulus operator and why.
+The Modulus operator determines the remainder of numbers divided. 
+
+// Check if a number is even
+function isEven(num) {
+        return num % 2 === 0;
+}
+
+// Use modulus for wrapping around array index - useful for circular navigation, game development, repeated tasks.
+let index = 7;
+let arrayLength = 5; 
+let wrappedIndex = index % arrayLength; //2
+
+
